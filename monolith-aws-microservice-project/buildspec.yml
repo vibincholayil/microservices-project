@@ -5,8 +5,8 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
-      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin 666234783044.dkr.ecr.eu-central-1.amazonaws.com/aws-microservice
-      - REPOSITORY_URI=666234783044.dkr.ecr.eu-central-1.amazonaws.com/aws-microservice
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin 307946671429.dkr.ecr.eu-west-2.amazonaws.com/microservices
+      - REPOSITORY_URI=307946671429.dkr.ecr.eu-west-2.amazonaws.com/microservices
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
 
